@@ -1,0 +1,17 @@
+{
+    "name":"Cricket score",
+    "version":"1.0",
+    "description":"this is a cricket extension",
+    "manifest_version":2,
+    "icons":{
+        "128":"cricket.png"
+    },
+    "browser_action":{
+        "default_icon":"cricket.png",
+        "default_popup":"popup.html"
+    },
+    "permissions":[
+        "activeTab"
+    ]
+    
+}
