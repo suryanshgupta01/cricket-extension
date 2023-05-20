@@ -26,7 +26,9 @@ fetch(`https://api.cricapi.com/v1/currentMatches?apikey=${API_KEY}&offset=0`)
             // image.append(teamname)
 
             // para.classList.add(`para${index}`)
-            score = "SCORE: " + match.score[0].r.toString() + "/" + match.score[0].w.toString() + " in " + match.score[0].o.toString() + " overs"
+            let size=match.score.length;
+            //updated score to be of the latest inning
+            score = "SCORE: " + match.score[size-1].r.toString() + "/" + match.score[size-1].w.toString() + " in " + match.score[size-1].o.toString() + " overs"
             para.setAttribute('class', `score`);
             // para.setAttribute('class', `para${index + 1}`);
             score_ele = document.createElement("p");
